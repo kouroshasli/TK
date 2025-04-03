@@ -1,0 +1,135 @@
+:root {
+    --hacker-green: #00ff00;
+    --dark-bg: #0a0a0a;
+    --darker-bg: #050505;
+}
+
+body {
+    background-color: var(--dark-bg);
+    color: var(--hacker-green);
+    font-family: 'Courier New', monospace;
+}
+
+.navbar {
+    background-color: var(--darker-bg) !important;
+    border-bottom: 1px solid var(--hacker-green);
+}
+
+.navbar-brand, .nav-link {
+    color: var(--hacker-green) !important;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.nav-link:hover {
+    color: #fff !important;
+    text-shadow: 0 0 10px var(--hacker-green);
+}
+
+.btn-hacker {
+    background-color: transparent;
+    border: 1px solid var(--hacker-green);
+    color: var(--hacker-green);
+    transition: all 0.3s ease;
+}
+
+.btn-hacker:hover {
+    background-color: var(--hacker-green);
+    color: var(--darker-bg);
+    box-shadow: 0 0 20px var(--hacker-green);
+}
+
+.footer {
+    background-color: var(--darker-bg);
+    border-top: 1px solid var(--hacker-green);
+    padding: 2rem 0;
+}
+
+.social-links a {
+    color: var(--hacker-green);
+    margin: 0 10px;
+    font-size: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #fff;
+    text-shadow: 0 0 10px var(--hacker-green);
+}
+
+.glitch-text {
+    position: relative;
+    animation: glitch 1s infinite;
+}
+
+@keyframes glitch {
+    0% {
+        text-shadow: 0.05em 0 0 #00fffc, -0.03em -0.04em 0 #fc00ff,
+                   0.025em 0.04em 0 #fffc00;
+    }
+    15% {
+        text-shadow: 0.05em 0 0 #00fffc, -0.03em -0.04em 0 #fc00ff,
+                   0.025em 0.04em 0 #fffc00;
+    }
+    16% {
+        text-shadow: -0.05em -0.025em 0 #00fffc, 0.025em 0.035em 0 #fc00ff,
+                   -0.05em -0.05em 0 #fffc00;
+    }
+    49% {
+        text-shadow: -0.05em -0.025em 0 #00fffc, 0.025em 0.035em 0 #fc00ff,
+                   -0.05em -0.05em 0 #fffc00;
+    }
+    50% {
+        text-shadow: 0.05em 0.035em 0 #00fffc, 0.03em 0 0 #fc00ff,
+                   0 -0.04em 0 #fffc00;
+    }
+    99% {
+        text-shadow: 0.05em 0.035em 0 #00fffc, 0.03em 0 0 #fc00ff,
+                   0 -0.04em 0 #fffc00;
+    }
+    100% {
+        text-shadow: -0.05em 0 0 #00fffc, -0.025em -0.04em 0 #fc00ff,
+                   -0.04em -0.025em 0 #fffc00;
+    }
+}
+
+/* Performance Optimizations */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar-brand {
+        font-size: 1.2rem;
+    }
+    
+    .nav-link {
+        font-size: 0.9rem;
+    }
+    
+    .hero-section h1 {
+        font-size: 2rem;
+    }
+    
+    .hero-section p {
+        font-size: 1rem;
+    }
+}
+
+/* Print Styles */
+@media print {
+    body {
+        background-color: white;
+        color: black;
+    }
+    
+    .navbar, .footer {
+        display: none;
+    }
+    
+    a {
+        text-decoration: none;
+    }
+} 

@@ -1,0 +1,425 @@
+{% comment %}
+Copyright (c) 2024 KouroshAsli
+All rights reserved.
+
+This project is the intellectual property of KouroshAsli.
+Unauthorized copying, modification, distribution, or use of this project,
+via any medium, is strictly prohibited.
+
+Contact: kouroshasli@proton.me
+Telegram: @kouroshasli
+GitHub: https://github.com/kouroshasli/TK
+{% endcomment %}
+
+{% load i18n %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="{{ LANGUAGE_CODE }}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="{% block meta_description %}{% trans "Kouroshasli - Professional Python Developer specializing in web development, AI, and machine learning" %}{% endblock %}">
+    <meta name="keywords" content="{% block meta_keywords %}{% trans "Python Developer, Web Development, AI, Machine Learning, Django, Flask, Data Science" %}{% endblock %}">
+    <meta name="author" content="Kouroshasli">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="{% block og_title %}{% trans "Kouroshasli - Python Developer" %}{% endblock %}">
+    <meta property="og:description" content="{% block og_description %}{% trans "Professional Python Developer specializing in web development, AI, and machine learning" %}{% endblock %}">
+    <meta property="og:image" content="{% block og_image %}{% static 'images/logo.jpg' %}{% endblock %}">
+    <meta property="og:url" content="{{ request.build_absolute_uri }}">
+    
+    <title>{% block title %}{% trans "Kouroshasli - Python Developer" %}{% endblock %}</title>
+    
+    <!-- Critical CSS -->
+    <style>
+        :root {
+            --hacker-green: #00ff00;
+            --dark-bg: #0a0a0a;
+            --darker-bg: #050505;
+            --neon-blue: #18f0f0;
+            --neon-pink: #ff00ff;
+        }
+        
+        body {
+            background-color: var(--dark-bg);
+            color: var(--hacker-green);
+            font-family: 'Courier New', monospace;
+            overflow-x: hidden;
+        }
+
+        .navbar {
+            background-color: rgba(5, 5, 5, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--hacker-green);
+            padding: 0.5rem 0;
+        }
+
+        .navbar-brand {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--hacker-green) !important;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            padding: 0.5rem 1rem;
+            border: 2px solid transparent;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .navbar-brand::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: var(--hacker-green);
+            opacity: 0.1;
+            transition: all 0.3s ease;
+            z-index: -1;
+        }
+
+        .navbar-brand:hover::before {
+            left: 0;
+        }
+
+        .navbar-brand:hover {
+            border-color: var(--hacker-green);
+            text-shadow: 0 0 10px var(--hacker-green);
+            transform: translateY(-2px);
+        }
+
+        .brand-text {
+            position: relative;
+            z-index: 1;
+        }
+
+        .brand-text::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: var(--hacker-green);
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+            transform-origin: right;
+        }
+
+        .navbar-brand:hover .brand-text::after {
+            transform: scaleX(1);
+            transform-origin: left;
+        }
+
+        @media (max-width: 991.98px) {
+            .navbar {
+                padding: 0.5rem 1rem;
+            }
+            
+            .navbar-brand {
+                font-size: 1.25rem;
+            }
+        }
+    </style>
+    
+    <!-- Preload critical assets -->
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" as="style">
+    <link rel="preload" href="{% static 'css/style.css' %}" as="style">
+    
+    <!-- Stylesheets -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flag-icons@6.7.0/css/flag-icons.min.css">
+    
+    <!-- Favicon with fallback -->
+    <link rel="icon" type="image/jpg" href="{% static 'images/logo.jpg' %}" onerror="this.href='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>K</text></svg>'">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="{% url 'home' %}">
+                <span class="brand-text">Kouroshasli</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu" aria-controls="mobileMenu" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'home' %}">{% trans "Home" %}</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'about' %}">{% trans "About" %}</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'projects' %}">{% trans "Projects" %}</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'contact' %}">{% trans "Contact" %}</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://open.spotify.com/playlist/5Q6ZGbfql3Sbrxc89Zd8Gb?si=77a2b29a93cf4e11" target="_blank">
+                            <i class="fab fa-spotify me-1"></i>{% trans "Spotify Playlist" %}
+                        </a>
+                    </li>
+                    <li class="nav-item ms-2">
+                        <div class="language-switcher dropdown">
+                            <button class="btn btn-hacker dropdown-toggle language-button" type="button" id="languageDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                                {% if LANGUAGE_CODE == 'sv' %}
+                                    <span class="fi fi-se"></span> SV
+                                {% else %}
+                                    <span class="fi fi-us"></span> EN
+                                {% endif %}
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="languageDropdown">
+                                <li>
+                                    <a href="#" class="dropdown-item" onclick="switchLanguage('en')">
+                                        <span class="fi fi-us"></span> English
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="dropdown-item" onclick="switchLanguage('sv')">
+                                        <span class="fi fi-se"></span> Svenska
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container py-5">
+        {% block content %}
+        {% endblock %}
+    </main>
+
+    <footer class="footer mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5 class="neon-text">Kouroshasli</h5>
+                    <p>{% trans "Python Developer" %} | 2005 | {% trans "Tehran, Iran" %}</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <div class="social-links">
+                        <a href="https://github.com/kouroshasli/TK" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="https://t.me/KouroshAsli" target="_blank" id="telegram-link"><i class="fab fa-telegram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-3">
+                <div class="col-12 text-center">
+                    <p class="mb-0">&copy; {% now "Y" %} KouroshAsli. {% trans "All rights reserved." %}</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap Offcanvas Mobile Menu -->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="mobileMenu" aria-labelledby="mobileMenuLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="mobileMenuLabel">{% trans "Menu" %}</h5>
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <nav class="mobile-nav">
+                <a class="mobile-nav-link {% if request.resolver_match.url_name == 'home' %}active{% endif %}" href="{% url 'home' %}">
+                    <i class="fas fa-home"></i>
+                    <span>{% trans "Home" %}</span>
+                </a>
+                <a class="mobile-nav-link {% if request.resolver_match.url_name == 'about' %}active{% endif %}" href="{% url 'about' %}">
+                    <i class="fas fa-user"></i>
+                    <span>{% trans "About" %}</span>
+                </a>
+                <a class="mobile-nav-link {% if request.resolver_match.url_name == 'projects' %}active{% endif %}" href="{% url 'projects' %}">
+                    <i class="fas fa-code"></i>
+                    <span>{% trans "Projects" %}</span>
+                </a>
+                <a class="mobile-nav-link {% if request.resolver_match.url_name == 'contact' %}active{% endif %}" href="{% url 'contact' %}">
+                    <i class="fas fa-envelope"></i>
+                    <span>{% trans "Contact" %}</span>
+                </a>
+                <a class="mobile-nav-link" href="https://open.spotify.com/playlist/5Q6ZGbfql3Sbrxc89Zd8Gb?si=77a2b29a93cf4e11" target="_blank">
+                    <i class="fab fa-spotify"></i>
+                    <span>{% trans "Spotify Playlist" %}</span>
+                </a>
+            </nav>
+            
+            <div class="mobile-language-switcher">
+                <form action="{% url 'set_language' %}" method="post">
+                    {% csrf_token %}
+                    <input name="next" type="hidden" value="{{ request.path }}">
+                    <div class="language-buttons">
+                        <button type="submit" name="language" value="en" class="btn btn-language {% if LANGUAGE_CODE == 'en' %}active{% endif %}">
+                            <span class="fi fi-us"></span>
+                            <span>English</span>
+                        </button>
+                        <button type="submit" name="language" value="sv" class="btn btn-language {% if LANGUAGE_CODE == 'sv' %}active{% endif %}">
+                            <span class="fi fi-se"></span>
+                            <span>Svenska</span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <style>
+        /* Offcanvas Mobile Menu Styles */
+        .offcanvas {
+            background-color: var(--darker-bg);
+            border-left: 1px solid var(--hacker-green);
+        }
+
+        .offcanvas-header {
+            border-bottom: 1px solid var(--hacker-green);
+            padding: 1rem;
+        }
+
+        .offcanvas-title {
+            color: var(--hacker-green);
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .btn-close {
+            filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%);
+        }
+
+        .mobile-nav {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            padding: 1rem 0;
+        }
+
+        .mobile-nav-link {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1rem;
+            color: var(--hacker-green);
+            text-decoration: none;
+            border: 1px solid transparent;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .mobile-nav-link i {
+            font-size: 1.25rem;
+            width: 24px;
+            text-align: center;
+        }
+
+        .mobile-nav-link span {
+            font-size: 1.1rem;
+        }
+
+        .mobile-nav-link:hover,
+        .mobile-nav-link.active {
+            background: rgba(0, 255, 0, 0.1);
+            border-color: var(--hacker-green);
+            transform: translateX(5px);
+        }
+
+        .mobile-language-switcher {
+            padding: 1rem;
+            margin-top: 1rem;
+            border-top: 1px solid rgba(0, 255, 0, 0.2);
+        }
+
+        .language-buttons {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.5rem;
+        }
+
+        .btn-language {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            padding: 0.75rem;
+            background: transparent;
+            border: 1px solid var(--hacker-green);
+            color: var(--hacker-green);
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .btn-language:hover,
+        .btn-language.active {
+            background: var(--hacker-green);
+            color: var(--darker-bg);
+        }
+
+        .btn-language .fi {
+            font-size: 1.2em;
+        }
+
+        /* Navbar Toggler Animation */
+        .navbar-toggler {
+            border: 1px solid var(--hacker-green);
+            padding: 0.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .navbar-toggler:hover {
+            background: rgba(0, 255, 0, 0.1);
+            transform: scale(1.1);
+        }
+
+        .navbar-toggler:focus {
+            box-shadow: 0 0 0 0.25rem rgba(0, 255, 0, 0.25);
+        }
+    </style>
+
+    <!-- Defer non-critical JavaScript -->
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Inline critical JavaScript -->
+    <script>
+        // Language switcher
+        function switchLanguage(lang) {
+            var path = window.location.pathname;
+            var newPath = path.match(/^\/(sv|en)\//) ? 
+                '/' + lang + path.substring(3) : 
+                '/' + lang + (path === '/' ? '/' : path);
+            window.location.href = newPath;
+        }
+        
+        // Mobile menu
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuBtn = document.querySelector('.navbar-toggler');
+            const mobileMenu = document.querySelector('.offcanvas');
+            const mobileMenuClose = document.querySelector('.btn-close');
+            const mobileMenuOverlay = document.querySelector('.mobile-menu-overlay');
+            const body = document.body;
+            const mobileMenuLinks = document.querySelectorAll('.mobile-nav .mobile-nav-link');
+            
+            function toggleMenu(show) {
+                mobileMenu.classList.toggle('active', show);
+                mobileMenuOverlay.classList.toggle('active', show);
+                body.style.overflow = show ? 'hidden' : '';
+            }
+            
+            mobileMenuBtn.addEventListener('click', () => toggleMenu(true));
+            mobileMenuClose.addEventListener('click', () => toggleMenu(false));
+            mobileMenuOverlay.addEventListener('click', () => toggleMenu(false));
+            mobileMenuLinks.forEach(link => link.addEventListener('click', () => toggleMenu(false)));
+            
+            // Telegram link mobile optimization
+            const telegramLink = document.getElementById('telegram-link');
+            if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent) && telegramLink) {
+                telegramLink.href = "tg://resolve?domain=KouroshAsli";
+            }
+        });
+    </script>
+</body>
+</html> 

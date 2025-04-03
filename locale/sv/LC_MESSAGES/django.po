@@ -1,0 +1,373 @@
+# Swedish translations for Kouroshasli website.
+# Copyright (C) 2024
+# This file is distributed under the same license as the Kouroshasli package.
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-04-01 21:42+0000\n"
+"PO-Revision-Date: 2024-04-01 21:42+0000\n"
+"Last-Translator: \n"
+"Language: sv\n"
+"Language-Team: \n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.14.0\n"
+
+#: .\templates\base.html:8
+#, fuzzy
+#| msgid ""
+#| "I am a passionate Python developer with expertise in web development, AI, "
+#| "and machine learning."
+msgid ""
+"Kouroshasli - Professional Python Developer specializing in web development, "
+"AI, and machine learning"
+msgstr ""
+"Jag är en passionerad Python-utvecklare med expertis inom webbutveckling, AI "
+"och maskininlärning."
+
+#: .\templates\base.html:9
+msgid ""
+"Python Developer, Web Development, AI, Machine Learning, Django, Flask, Data "
+"Science"
+msgstr ""
+
+# Base translations
+#: .\templates\base.html:12 .\templates\base.html:17
+msgid "Kouroshasli - Python Developer"
+msgstr "Kouroshasli - Python-utvecklare"
+
+#: .\templates\base.html:13
+#, fuzzy
+#| msgid ""
+#| "I am a passionate Python developer with expertise in web development, AI, "
+#| "and machine learning."
+msgid ""
+"Professional Python Developer specializing in web development, AI, and "
+"machine learning"
+msgstr ""
+"Jag är en passionerad Python-utvecklare med expertis inom webbutveckling, AI "
+"och maskininlärning."
+
+#: .\templates\base.html:497
+msgid "Home"
+msgstr "Hem"
+
+#: .\templates\base.html:500
+msgid "About"
+msgstr "Om mig"
+
+#: .\templates\base.html:503
+msgid "Projects"
+msgstr "Projekt"
+
+#: .\templates\base.html:506
+msgid "Contact"
+msgstr "Kontakt"
+
+#: .\templates\base.html:546
+msgid "Python Developer"
+msgstr "Python-utvecklare"
+
+#: .\templates\base.html:546 .\templates\main\about.html:25
+#: .\templates\main\contact.html:18
+msgid "Tehran, Iran"
+msgstr "Teheran, Iran"
+
+# About page translations
+#: .\templates\main\about.html:4
+msgid "About - Kouroshasli"
+msgstr "Om - Kouroshasli"
+
+#: .\templates\main\about.html:10
+msgid "About Me"
+msgstr "Om mig"
+
+#: .\templates\main\about.html:11
+#, fuzzy
+#| msgid ""
+#| "I am an 18-year-old Python developer from Tehran, Iran, with a passion "
+#| "for creating innovative solutions."
+msgid ""
+"I am a Python developer born in 2005 from Tehran, Iran, with a passion for "
+"creating innovative solutions."
+msgstr ""
+"Jag är en Python-utvecklare född 2005 från Teheran, Iran, med en passion för "
+"att skapa innovativa lösningar."
+
+#: .\templates\main\about.html:12
+msgid ""
+"Despite my young age, I have developed a strong foundation in Python "
+"programming and web development. I love learning new technologies and "
+"applying them to solve real-world problems."
+msgstr ""
+"Trots min unga ålder har jag utvecklat en stark grund i Python-programmering "
+"och webbutveckling. Jag älskar att lära mig nya teknologier och tillämpa dem "
+"för att lösa verkliga problem."
+
+#: .\templates\main\about.html:17
+msgid "Quick Facts"
+msgstr "Snabböversikt"
+
+#: .\templates\main\about.html:21 .\templates\main\home.html:45
+msgid "Python Development"
+msgstr "Python-utveckling"
+
+#: .\templates\main\about.html:29
+msgid "Born in 2005"
+msgstr "Född 2005"
+
+# Contact page translations
+#: .\templates\main\contact.html:5
+msgid "Contact - Kouroshasli"
+msgstr "Kontakt - Kouroshasli"
+
+#: .\templates\main\contact.html:11
+msgid "Get in Touch"
+msgstr "Kontakta mig"
+
+#: .\templates\main\contact.html:15
+msgid "Contact Information"
+msgstr "Kontaktinformation"
+
+#: .\templates\main\contact.html:17
+msgid "Email"
+msgstr "E-post"
+
+#: .\templates\main\contact.html:18
+msgid "Location"
+msgstr "Plats"
+
+#: .\templates\main\contact.html:19
+msgid "Website"
+msgstr "Webbplats"
+
+#: .\templates\main\contact.html:26
+msgid "Send Me a Message"
+msgstr "Skicka ett meddelande"
+
+#: .\templates\main\contact.html:30
+msgid "Your Name"
+msgstr "Ditt namn"
+
+#: .\templates\main\contact.html:34
+msgid "Your Email"
+msgstr "Din e-post"
+
+#: .\templates\main\contact.html:38
+msgid "Subject"
+msgstr "Ämne"
+
+#: .\templates\main\contact.html:42
+msgid "Message"
+msgstr "Meddelande"
+
+#: .\templates\main\contact.html:45
+msgid "Send Message"
+msgstr "Skicka meddelande"
+
+# Home page translations
+#: .\templates\main\home.html:4
+msgid "Home - Kouroshasli"
+msgstr "Hem - Kouroshasli"
+
+#: .\templates\main\home.html:10
+msgid "Hello, "
+msgstr ""
+
+#: .\templates\main\home.html:11
+msgid "I'm "
+msgstr ""
+
+#: .\templates\main\home.html:13
+#, fuzzy
+#| msgid ""
+#| "A 19-year-old Python developer from Tehran, Iran, passionate about "
+#| "creating innovative solutions."
+msgid ""
+"A Python developer born in 2005 from Tehran, Iran, passionate about creating "
+"innovative solutions."
+msgstr ""
+"En 19-årig Python-utvecklare från Teheran, Iran, passionerad för att skapa "
+"innovativa lösningar."
+
+#: .\templates\main\home.html:15
+msgid "View Projects"
+msgstr "Visa projekt"
+
+#: .\templates\main\home.html:16
+msgid "Contact Me"
+msgstr "Kontakta mig"
+
+#: .\templates\main\home.html:46
+msgid ""
+"Specialized in Python programming with expertise in web development, "
+"automation, and data analysis."
+msgstr ""
+"Specialiserad på Python-programmering med expertis inom webbutveckling, "
+"automatisering och dataanalys."
+
+#: .\templates\main\home.html:53
+msgid "Web Development"
+msgstr "Webbutveckling"
+
+#: .\templates\main\home.html:54
+msgid ""
+"Creating modern web applications using Django, Flask, and other cutting-edge "
+"technologies."
+msgstr ""
+"Skapar moderna webbapplikationer med Django, Flask och andra toppmoderna "
+"teknologier."
+
+#: .\templates\main\home.html:61
+msgid "Problem Solving"
+msgstr "Problemlösning"
+
+#: .\templates\main\home.html:62
+msgid ""
+"Expert in developing efficient algorithms and finding innovative solutions "
+"to complex problems."
+msgstr ""
+"Expert på att utveckla effektiva algoritmer och hitta innovativa lösningar "
+"på komplexa problem."
+
+# Projects page translations
+#: .\templates\main\projects.html:4
+msgid "Projects - Kouroshasli"
+msgstr "Projekt - Kouroshasli"
+
+#: .\templates\main\projects.html:8
+msgid "My Projects"
+msgstr "Mina projekt"
+
+#: .\templates\main\projects.html:14
+msgid "AI Chat Assistant"
+msgstr "AI-chattassistent"
+
+#: .\templates\main\projects.html:15
+msgid ""
+"A sophisticated chatbot powered by machine learning algorithms, capable of "
+"natural language processing and intelligent responses."
+msgstr ""
+"En sofistikerad chattbot driven av maskininlärningsalgoritmer, kapabel till "
+"naturlig språkbehandling och intelligenta svar."
+
+#: .\templates\main\projects.html:21 .\templates\main\projects.html:36
+#: .\templates\main\projects.html:51 .\templates\main\projects.html:66
+#, fuzzy
+#| msgid "View Projects"
+msgid "View Project"
+msgstr "Visa projekt"
+
+#: .\templates\main\projects.html:29
+msgid "Data Analytics Dashboard"
+msgstr "Dataanalys-dashboard"
+
+#: .\templates\main\projects.html:30
+msgid ""
+"An interactive dashboard for visualizing complex data sets, featuring real-"
+"time updates and customizable charts."
+msgstr ""
+"En interaktiv dashboard för visualisering av komplexa datamängder, med "
+"realtidsuppdateringar och anpassningsbara diagram."
+
+#: .\templates\main\projects.html:44
+msgid "Automation Framework"
+msgstr "Automatiseringsramverk"
+
+#: .\templates\main\projects.html:45
+msgid ""
+"A robust automation framework for streamlining repetitive tasks and "
+"improving workflow efficiency."
+msgstr ""
+"Ett robust automatiseringsramverk för att effektivisera repetitiva uppgifter "
+"och förbättra arbetsflödet."
+
+#: .\templates\main\projects.html:59
+msgid "API Integration Platform"
+msgstr "API-integrationsplattform"
+
+#: .\templates\main\projects.html:60
+msgid ""
+"A flexible platform for managing and integrating multiple third-party APIs "
+"with comprehensive documentation."
+msgstr ""
+"En flexibel plattform för hantering och integrering av flera "
+"tredjepartsAPI:er med omfattande dokumentation."
+
+msgid "Spotify Playlist"
+msgstr "Spotify Spellista"
+
+#~ msgid "years old"
+#~ msgstr "år gammal"
+
+#~ msgid "Hello, I'm Kouroshasli"
+#~ msgstr "Hej, jag är Kouroshasli"
+
+#~ msgid "Who Am I?"
+#~ msgstr "Vem är jag?"
+
+#~ msgid "Skills & Expertise"
+#~ msgstr "Färdigheter & Expertis"
+
+#~ msgid "Programming Languages"
+#~ msgstr "Programmeringsspråk"
+
+#~ msgid "Frameworks & Tools"
+#~ msgstr "Ramverk & Verktyg"
+
+#~ msgid "Education & Experience"
+#~ msgstr "Utbildning & Erfarenhet"
+
+#~ msgid "Self-Taught Developer"
+#~ msgstr "Självlärd utvecklare"
+
+#~ msgid ""
+#~ "I believe in continuous learning and have dedicated countless hours to "
+#~ "mastering programming through online courses, documentation, and hands-on "
+#~ "project experience."
+#~ msgstr ""
+#~ "Jag tror på kontinuerligt lärande och har ägnat otaliga timmar åt att "
+#~ "bemästra programmering genom onlinekurser, dokumentation och praktisk "
+#~ "projekterfarenhet."
+
+#~ msgid "Message sent successfully!"
+#~ msgstr "Meddelandet har skickats!"
+
+#~ msgid "Error sending message. Please try again."
+#~ msgstr "Fel vid sändning av meddelande. Försök igen."
+
+#~ msgid "5+ Years of Experience"
+#~ msgstr "5+ års erfarenhet"
+
+#~ msgid "50+ Projects Completed"
+#~ msgstr "50+ projekt slutförda"
+
+#~ msgid "20+ Happy Clients"
+#~ msgstr "20+ nöjda kunder"
+
+#~ msgid "My Skills"
+#~ msgstr "Mina färdigheter"
+
+#~ msgid "All"
+#~ msgstr "Alla"
+
+#~ msgid "Programming"
+#~ msgstr "Programmering"
+
+#~ msgid "Frameworks"
+#~ msgstr "Ramverk"
+
+#~ msgid "Databases"
+#~ msgstr "Databaser"
+
+#~ msgid "Tools"
+#~ msgstr "Verktyg"
+
+#~ msgid "Name"
+#~ msgstr "Namn"
+
+#~ msgid "18 Years Old"
+#~ msgstr "18 år gammal"

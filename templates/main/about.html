@@ -1,0 +1,243 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{% load static %}
+
+{% block title %}{% trans "About - Kouroshasli" %}{% endblock %}
+
+{% block content %}
+<div class="about-section">
+    <div class="row">
+        <div class="col-lg-8 mx-auto">
+            <div class="about-content">
+                <h1 class="about-title">
+                    <span class="title-line">{% trans "About Me" %}</span>
+                </h1>
+                
+                <div class="about-text">
+                    <p class="lead fade-in">{% trans "Hello! I'm Kouroshasli, a passionate Python developer born in 2005 from Tehran, Iran." %}</p>
+                    <p class="fade-in delay-1">{% trans "Despite my young age, I have developed a strong foundation in Python programming and web development. I love learning new technologies and applying them to solve real-world problems." %}</p>
+                </div>
+
+                <div class="skills-section">
+                    <h2 class="section-title fade-in delay-2">{% trans "Skills & Expertise" %}</h2>
+                    <div class="skills-grid">
+                        <div class="skill-card fade-in delay-3">
+                            <i class="fas fa-code"></i>
+                            <h3>{% trans "Python Development" %}</h3>
+                            <p>{% trans "Expert in Python programming with focus on web development and automation" %}</p>
+                        </div>
+                        <div class="skill-card fade-in delay-4">
+                            <i class="fas fa-database"></i>
+                            <h3>{% trans "Backend Development" %}</h3>
+                            <p>{% trans "Proficient in Django, Flask, and database management" %}</p>
+                        </div>
+                        <div class="skill-card fade-in delay-5">
+                            <i class="fas fa-robot"></i>
+                            <h3>{% trans "AI & Machine Learning" %}</h3>
+                            <p>{% trans "Experience with AI/ML technologies and data analysis" %}</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="terminal-section fade-in delay-6">
+                    <div class="terminal-header">
+                        <div class="terminal-title">kouroshasli@dev:~$</div>
+                    </div>
+                    <div class="terminal-body">
+                        <div class="command-line"><span class="prompt">$</span> whoami</div>
+                        <div class="output">Python Developer | Problem Solver | Tech Enthusiast</div>
+                        <div class="command-line"><span class="prompt">$</span> cat skills.txt</div>
+                        <div class="output">
+                            - Python, Django, Flask
+                            - RESTful APIs
+                            - Database Design
+                            - AI/ML Development
+                            - Problem Solving
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .about-section {
+        padding: 4rem 0;
+    }
+
+    .about-content {
+        position: relative;
+    }
+
+    .about-title {
+        font-size: 3rem;
+        margin-bottom: 3rem;
+        position: relative;
+    }
+
+    .title-line {
+        position: relative;
+        color: var(--hacker-green);
+        display: inline-block;
+    }
+
+    .title-line::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: -10px;
+        width: 100%;
+        height: 2px;
+        background: var(--hacker-green);
+        box-shadow: 0 0 10px var(--hacker-green);
+    }
+
+    .about-text {
+        margin-bottom: 3rem;
+    }
+
+    .about-text p {
+        margin-bottom: 1.5rem;
+        line-height: 1.8;
+    }
+
+    .skills-section {
+        margin-bottom: 3rem;
+    }
+
+    .section-title {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+        color: var(--hacker-green);
+    }
+
+    .skills-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1.5rem;
+        margin-bottom: 3rem;
+    }
+
+    .skill-card {
+        background: rgba(0, 255, 0, 0.05);
+        border: 1px solid var(--hacker-green);
+        border-radius: 10px;
+        padding: 1.5rem;
+        transition: all 0.3s ease;
+    }
+
+    .skill-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 5px 15px rgba(0, 255, 0, 0.2);
+    }
+
+    .skill-card i {
+        font-size: 2rem;
+        color: var(--hacker-green);
+        margin-bottom: 1rem;
+    }
+
+    .skill-card h3 {
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+        color: var(--hacker-green);
+    }
+
+    .terminal-section {
+        background: rgba(0, 0, 0, 0.8);
+        border-radius: 10px;
+        overflow: hidden;
+        border: 1px solid var(--hacker-green);
+    }
+
+    .terminal-header {
+        background: rgba(0, 0, 0, 0.9);
+        padding: 0.8rem 1rem;
+        border-bottom: 1px solid var(--hacker-green);
+    }
+
+    .terminal-title {
+        color: var(--hacker-green);
+        font-family: 'Courier New', monospace;
+    }
+
+    .terminal-body {
+        padding: 1.5rem;
+        font-family: 'Courier New', monospace;
+    }
+
+    .command-line {
+        margin-bottom: 1rem;
+        color: var(--hacker-green);
+    }
+
+    .prompt {
+        color: var(--hacker-green);
+        margin-right: 0.5rem;
+    }
+
+    .output {
+        color: #fff;
+        margin-bottom: 1.5rem;
+        line-height: 1.6;
+    }
+
+    /* Animations */
+    .fade-in {
+        opacity: 0;
+        transform: translateY(20px);
+        animation: fadeIn 0.6s ease forwards;
+    }
+
+    .delay-1 { animation-delay: 0.2s; }
+    .delay-2 { animation-delay: 0.4s; }
+    .delay-3 { animation-delay: 0.6s; }
+    .delay-4 { animation-delay: 0.8s; }
+    .delay-5 { animation-delay: 1.0s; }
+    .delay-6 { animation-delay: 1.2s; }
+
+    @keyframes fadeIn {
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    /* Mobile Responsiveness */
+    @media (max-width: 768px) {
+        .about-section {
+            padding: 2rem 0;
+        }
+
+        .about-title {
+            font-size: 2.5rem;
+        }
+
+        .skills-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .skill-card {
+            text-align: center;
+        }
+    }
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.animationPlayState = 'running';
+            }
+        });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.fade-in').forEach(el => {
+        el.style.animationPlayState = 'paused';
+        observer.observe(el);
+    });
+});
+</script>
+{% endblock %} 

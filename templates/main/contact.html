@@ -1,0 +1,72 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{% load crispy_forms_tags %}
+
+{% block title %}{% trans "Contact - Kouroshasli" %}{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-lg-8 mx-auto">
+            <h1 class="display-4 glitch-text mb-4">{% trans "Get in Touch" %}</h1>
+            
+            <div class="card bg-transparent border-hacker mb-4">
+                <div class="card-body">
+                    <h5 class="card-title">{% trans "Contact Information" %}</h5>
+                    <div class="contact-info">
+                        <p><i class="fas fa-envelope"></i> {% trans "Email" %}: kouroshasli@proton.me</p>
+                        <p><i class="fas fa-map-marker-alt"></i> {% trans "Location" %}: {% trans "Tehran, Iran" %}</p>
+                        <p><i class="fas fa-globe"></i> {% trans "Website" %}: https://github.com/kouroshasli/TK</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card bg-transparent border-hacker">
+                <div class="card-body">
+                    <h5 class="card-title mb-4">{% trans "Send Me a Message" %}</h5>
+                    <form method="post">
+                        {% csrf_token %}
+                        <div class="mb-3">
+                            <label for="name" class="form-label">{% trans "Your Name" %}</label>
+                            <input type="text" class="form-control bg-dark text-light" id="name" name="name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">{% trans "Your Email" %}</label>
+                            <input type="email" class="form-control bg-dark text-light" id="email" name="email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="subject" class="form-label">{% trans "Subject" %}</label>
+                            <input type="text" class="form-control bg-dark text-light" id="subject" name="subject" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="message" class="form-label">{% trans "Message" %}</label>
+                            <textarea class="form-control bg-dark text-light" id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-hacker">{% trans "Send Message" %}</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .form-control {
+        border-color: var(--hacker-green);
+    }
+    
+    .form-control:focus {
+        border-color: var(--hacker-green);
+        box-shadow: 0 0 0 0.25rem rgba(0, 255, 0, 0.25);
+    }
+    
+    .contact-info {
+        color: var(--hacker-green);
+    }
+    
+    .contact-info i {
+        margin-right: 10px;
+        width: 20px;
+    }
+</style>
+{% endblock %} 

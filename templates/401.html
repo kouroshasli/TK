@@ -1,0 +1,170 @@
+{% extends 'base.html' %}
+{% load i18n %}
+
+{% block title %}{% trans "401 - Unauthorized" %}{% endblock %}
+
+{% block content %}
+<div class="container text-center py-5">
+    <div class="error-page">
+        <h1 class="display-1 glitch-text" data-text="401">401</h1>
+        <h2 class="mb-4">{% trans "Unauthorized" %}</h2>
+        <p class="lead mb-4">{% trans "Authentication is required to access this resource." %}</p>
+        
+        <div class="error-actions">
+            <a href="{% url 'home' %}" class="btn btn-hacker">
+                <i class="fas fa-home me-2"></i>{% trans "Return Home" %}
+            </a>
+        </div>
+
+        <div class="error-details mt-5">
+            <div class="terminal-window">
+                <div class="terminal-header">
+                    <span class="terminal-title">Error Details</span>
+                    <div class="terminal-controls">
+                        <span class="control close"></span>
+                        <span class="control minimize"></span>
+                        <span class="control maximize"></span>
+                    </div>
+                </div>
+                <div class="terminal-content">
+                    <p class="error-path">$ {{ request.path }}</p>
+                    <p class="error-message">> ERROR: Authentication Required</p>
+                    <p class="error-suggestion">> Suggestion: Please log in to continue</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .error-page {
+        padding: 2rem;
+    }
+
+    .glitch-text {
+        position: relative;
+        color: var(--hacker-green);
+        text-shadow: 0.05em 0 0 var(--neon-pink),
+                     -0.05em -0.025em 0 var(--neon-blue);
+        animation: glitch 500ms infinite;
+    }
+
+    .glitch-text span {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    @keyframes glitch {
+        0% {
+            text-shadow: 0.05em 0 0 var(--neon-pink),
+                         -0.05em -0.025em 0 var(--neon-blue);
+        }
+        14% {
+            text-shadow: 0.05em 0 0 var(--neon-pink),
+                         -0.05em -0.025em 0 var(--neon-blue);
+        }
+        15% {
+            text-shadow: -0.05em -0.025em 0 var(--neon-pink),
+                         0.025em 0.025em 0 var(--neon-blue);
+        }
+        49% {
+            text-shadow: -0.05em -0.025em 0 var(--neon-pink),
+                         0.025em 0.025em 0 var(--neon-blue);
+        }
+        50% {
+            text-shadow: 0.025em 0.05em 0 var(--neon-pink),
+                         0.05em 0 0 var(--neon-blue);
+        }
+        99% {
+            text-shadow: 0.025em 0.05em 0 var(--neon-pink),
+                         0.05em 0 0 var(--neon-blue);
+        }
+        100% {
+            text-shadow: -0.025em 0 0 var(--neon-pink),
+                         -0.025em -0.025em 0 var(--neon-blue);
+        }
+    }
+
+    .terminal-window {
+        background: var(--darker-bg);
+        border: 1px solid var(--hacker-green);
+        border-radius: 5px;
+        margin: 2rem auto;
+        max-width: 600px;
+        overflow: hidden;
+        box-shadow: 0 0 20px rgba(0, 255, 0, 0.1);
+    }
+
+    .terminal-header {
+        background: rgba(0, 255, 0, 0.1);
+        padding: 0.5rem 1rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid var(--hacker-green);
+    }
+
+    .terminal-title {
+        color: var(--hacker-green);
+        font-size: 0.9rem;
+    }
+
+    .terminal-controls {
+        display: flex;
+        gap: 0.5rem;
+    }
+
+    .control {
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background: var(--hacker-green);
+        opacity: 0.5;
+    }
+
+    .terminal-content {
+        padding: 1rem;
+        font-family: 'Courier New', monospace;
+    }
+
+    .error-path {
+        color: var(--hacker-green);
+        margin-bottom: 0.5rem;
+    }
+
+    .error-message {
+        color: #ff4444;
+        margin-bottom: 0.5rem;
+    }
+
+    .error-suggestion {
+        color: #ffbb33;
+    }
+
+    .error-actions {
+        margin-top: 2rem;
+    }
+
+    .btn-hacker {
+        padding: 0.8rem 2rem;
+        font-size: 1.1rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+    @media (max-width: 768px) {
+        .error-page {
+            padding: 1rem;
+        }
+
+        .display-1 {
+            font-size: 4rem;
+        }
+
+        .terminal-window {
+            margin: 1rem;
+        }
+    }
+</style>
+{% endblock %} 

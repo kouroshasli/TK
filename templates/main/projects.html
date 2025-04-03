@@ -1,0 +1,91 @@
+{% extends 'base.html' %}
+{% load i18n %}
+
+{% block title %}{% trans "Projects - Kouroshasli" %}{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h1 class="display-4 glitch-text mb-5">{% trans "My Projects" %}</h1>
+    
+    <div class="row">
+        <div class="col-md-6 mb-4">
+            <div class="card bg-transparent border-hacker h-100">
+                <div class="card-body">
+                    <h5 class="card-title">{% trans "AI Chat Assistant" %}</h5>
+                    <p class="card-text">{% trans "A sophisticated chatbot powered by machine learning algorithms, capable of natural language processing and intelligent responses." %}</p>
+                    <div class="tech-stack">
+                        <span class="badge bg-success">Python</span>
+                        <span class="badge bg-info">TensorFlow</span>
+                        <span class="badge bg-warning">NLP</span>
+                    </div>
+                    <a href="#" class="btn btn-hacker mt-3">{% trans "View Project" %}</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-md-6 mb-4">
+            <div class="card bg-transparent border-hacker h-100">
+                <div class="card-body">
+                    <h5 class="card-title">{% trans "Data Analytics Dashboard" %}</h5>
+                    <p class="card-text">{% trans "An interactive dashboard for visualizing complex data sets, featuring real-time updates and customizable charts." %}</p>
+                    <div class="tech-stack">
+                        <span class="badge bg-success">Python</span>
+                        <span class="badge bg-primary">Django</span>
+                        <span class="badge bg-danger">D3.js</span>
+                    </div>
+                    <a href="#" class="btn btn-hacker mt-3">{% trans "View Project" %}</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-md-6 mb-4">
+            <div class="card bg-transparent border-hacker h-100">
+                <div class="card-body">
+                    <h5 class="card-title">{% trans "Automation Framework" %}</h5>
+                    <p class="card-text">{% trans "A robust automation framework for streamlining repetitive tasks and improving workflow efficiency." %}</p>
+                    <div class="tech-stack">
+                        <span class="badge bg-success">Python</span>
+                        <span class="badge bg-secondary">Selenium</span>
+                        <span class="badge bg-info">Docker</span>
+                    </div>
+                    <a href="#" class="btn btn-hacker mt-3">{% trans "View Project" %}</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-md-6 mb-4">
+            <div class="card bg-transparent border-hacker h-100">
+                <div class="card-body">
+                    <h5 class="card-title">{% trans "API Integration Platform" %}</h5>
+                    <p class="card-text">{% trans "A flexible platform for managing and integrating multiple third-party APIs with comprehensive documentation." %}</p>
+                    <div class="tech-stack">
+                        <span class="badge bg-success">Python</span>
+                        <span class="badge bg-primary">FastAPI</span>
+                        <span class="badge bg-warning">Redis</span>
+                    </div>
+                    <a href="#" class="btn btn-hacker mt-3">{% trans "View Project" %}</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .tech-stack {
+        margin-top: 1rem;
+    }
+    
+    .badge {
+        margin-right: 0.5rem;
+        padding: 0.5rem 1rem;
+    }
+    
+    .card {
+        transition: transform 0.3s ease;
+    }
+    
+    .card:hover {
+        transform: translateY(-5px);
+    }
+</style>
+{% endblock %} 
