@@ -1,1 +1,6 @@
+
+vless://0c6f62ee-daf7-45ea-81a0-5e2c41d327e3@45.130.125.76:443?path=%2F&security=tls&encryption=none&insecure=0&host=v20251104.koouroshasli.workers.dev&fp=chrome&type=ws&allowInsecure=0&sni=v20251104.koouroshasli.workers.dev#edgetunnel
+
+https://v20251104.koouroshasli.workers.dev/sub?token=4d2283a0f1183c14df730fc70c4294ff
+
 45.130.125.76
