@@ -3,4 +3,8 @@ vless://0c6f62ee-daf7-45ea-81a0-5e2c41d327e3@45.130.125.76:443?path=%2F&security
 
 https://v20251104.koouroshasli.workers.dev/sub?token=4d2283a0f1183c14df730fc70c4294ff
 
+
 45.130.125.76
+
+
+vless://e37e7346-95ed-4593-a47e-23f77e38c998@black-frost-0c92.koouroshasli.workers.dev:8880?path=%2F%3Fed%3D2560&security=none&encryption=none&host=black-frost-0c92.koouroshasli.workers.dev&type=ws#asli
